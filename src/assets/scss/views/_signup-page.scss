@@ -1,0 +1,18 @@
+.signup-page{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .main-header{
+        font-weight: bolder;
+        margin-bottom: 40px;
+    }
+    .logo-img{
+        max-width: 300px;
+        margin-bottom: 40px;
+    }
+
+    h2{
+        margin-bottom: 25px;
+    }
+}

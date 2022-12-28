@@ -1,0 +1,17 @@
+.home{
+    display: flex;
+    justify-content: center;
+    img{
+        width: 200px;
+        border-radius: 50%;
+        border: 6px solid rgba(62, 62, 205, 0.547);
+    }
+
+    .user-section{
+        .main-header{
+            font-size: 30px;
+            font-weight: bolder;
+            margin-bottom: 10px;
+        }
+    }
+}

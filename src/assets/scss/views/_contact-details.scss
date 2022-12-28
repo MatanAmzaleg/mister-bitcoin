@@ -1,0 +1,32 @@
+.contact-details {
+  margin-top: 150px;
+  width: 400px;
+  margin-inline: auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  >*{
+    margin-block: 8px;
+  }
+  .user-img{
+    border-radius: 50%;
+    width: 80px;
+    outline: 4px solid rgb(79, 79, 139);
+  }
+
+  .links{
+    margin-top: 10px;
+    >*{
+        border: 1px solid rgb(199, 199, 199);
+        color:  rgb(149, 149, 149);
+        margin-inline-end: 10px;
+        font-weight: bolder;
+        padding: 5px;
+
+        &:hover{
+            border: 1px solid rgb(149, 149, 149);
+            color:  rgb(64, 64, 64);
+        }
+    }
+  }
+}
