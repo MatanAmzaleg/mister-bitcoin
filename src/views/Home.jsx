@@ -3,9 +3,9 @@ import { bitcoinService } from "../services/bitcoin.service";
 import { Charts } from "./Charts";
 import { userService } from "../services/user.service";
 import { NavLink, withRouter } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { connect } from "react-redux";
 import { signUp, setUsername } from "../store/actions/user.actions";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export class _Home extends Component {
   state = {
@@ -52,14 +52,15 @@ export class _Home extends Component {
             <span className="bolder">User:</span> {loggedInUser.name}
           </h1>
           <h1>
-            <span className="bolder">Coins:</span> {loggedInUser.coins}
+          <img className="dollar-img" src={require("../assets/imgs/dollar.png")} alt="" />
+            <span className="bolder"><FontAwesomeIcon icon="fa-solid fa-coins" />Coins:</span> {loggedInUser.coins}
           </h1>
           <h1>
+          <img className="dollar-img" src={require("../assets/imgs/bitcoin.png")} alt="" />
             <span className="bolder">
-              Btc:
-              <FontAwesomeIcon icon="fa-brands fa-bitcoin" />{" "}
+              Btc: 
             </span>
-            {bitcoin}
+             {bitcoin}
           </h1>
         </div>
       </section>

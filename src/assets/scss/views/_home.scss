@@ -31,10 +31,21 @@
     height: 200px;
     object-fit: cover;
   }
+
+
   
   h1 {
+    display: flex;
+    align-items: center;
     font-size: 2rem;
     margin: 10px 0;
+
+    .dollar-img{
+      border-radius: 0;
+      width: 40px;
+      height: 40px;
+      margin-inline-end: 20px;
+    }
   }
   
   .bolder {
