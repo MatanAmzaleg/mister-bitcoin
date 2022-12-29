@@ -12,10 +12,7 @@ function _AppHeader(props) {
     return (
         <header className="app-header">
             <section className="container">
-                <h1 className="logo">Contacts</h1>
-                <section className='back'>
-                    <button onClick={onBack}>Back</button>
-                </section>
+                <h1 className="logo">Mister-BITcoin</h1>
                 <nav>
                     <NavLink exact to="/" >My profile</NavLink>
                     <NavLink to="/contacts" >Contacts</NavLink>

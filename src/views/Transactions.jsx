@@ -14,7 +14,7 @@ export class _Transactions extends Component {
   };
 
   componentDidMount() {
-    this.getBitcoin()
+    this.getBitcoin();
     console.log(this.props);
   }
 
@@ -42,16 +42,18 @@ export class _Transactions extends Component {
           alt=""
         />
       );
+
+      if(!loggedInUser.moves) return  <h1 className="main-header">No transactions yet</h1>
     return (
       <section className="transactions">
-          <h1 className="main-header">My Transactions:</h1>
-          {this.props.loggedInUser.moves.map(move => 
-            <div className="move">
-                <h1>To: {move.to}</h1>
-                <h1>Time: {new Date(move.at).toLocaleString()}</h1>
-                <h1>Amount: {move.amount}$</h1>
-            </div>
-          )}
+        <h1 className="main-header">My Transactions:</h1>
+        {this.props.loggedInUser.moves.map((move) => (
+          <div className="move">
+            <h1>To: {move.to}</h1>
+            <h1>Time: {new Date(move.at).toLocaleString()}</h1>
+            <h1>Amount: {move.amount}$</h1>
+          </div>
+        ))}
       </section>
     );
   }
@@ -67,4 +69,7 @@ const mapDispatchToProps = {
   setUsername,
 };
 
-export const Transactions = connect(mapStateToProps, mapDispatchToProps)(_Transactions);
+export const Transactions = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(_Transactions);
